@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>rpc-learning-new</artifactId>
+        <groupId>io.zz.rpc</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>rpc-serialization</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>rpc-serialization-api</module>
+        <module>rpc-serialization-jdk</module>
+        <module>rpc-serialization-json</module>
+        <module>rpc-serialization-hessian2</module>
+        <module>rpc-serialization-fst</module>
+        <module>rpc-serialization-kryo</module>
+        <module>rpc-serialization-protostuff</module>
+    </modules>
+
+
+</project>
