@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>rpc-provider</artifactId>
+        <groupId>io.zz.rpc</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>rpc-provider-common</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-codec</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-registry-zookeeper</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-spi</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-reflect-jdk</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-reflect-cglib</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-reflect-javassist</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-reflect-bytebuddy</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-reflect-asm</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-cache</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-connection</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-buffer</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-ratelimiter-counter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-ratelimiter-semaphore</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-ratelimiter-guava</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-fusing-counter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-fusing-percent</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zz.rpc</groupId>
+            <artifactId>rpc-exception-print</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+    </dependencies>
+</project>
