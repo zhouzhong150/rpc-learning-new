@@ -1,0 +1,60 @@
+server:
+  port: 8080
+
+rpc:
+  zz:
+    provider:
+      # rpc server
+      serverAddress: 127.0.0.1:20880
+      # serverRegistryAddress
+      serverRegistryAddress: 127.0.0.1:20881
+      # zookeeper server
+      registryAddress: 127.0.0.1:2181
+      # registry center type, zookeeper/nacos/apoll/etcd/eureka
+      registryType: zookeeper
+      #registry loadbalance type: zkconsistenthash
+      registryLoadBalanceType: zkconsistenthash
+      # reflect type, value is jdk or cglib
+      reflectType: cglib
+      # heartbeatInterval
+      heartbeatInterval: 30000
+      # scanNotActiveChannelInterval
+      scanNotActiveChannelInterval: 60000
+      # enableResultCache
+      enableResultCache: true
+      # resultCacheExpire
+      resultCacheExpire: 10000
+      # corePoolSize
+      corePoolSize: 16
+      # maximumPoolSize
+      maximumPoolSize: 16
+      # flowType
+      flowType: print
+      # maxConnections
+      maxConnections: 500
+      # disuseStrategyType
+      disuseStrategyType: strategy_default
+      # enableBuffer
+      enableBuffer: true
+      # bufferSize
+      bufferSize: 409600
+      # enableRateLimiter
+      enableRateLimiter: true
+      # rateLimiterType
+      rateLimiterType: counter
+      # permits
+      permits: 100
+      # milliSeconds
+      milliSeconds: 1000
+      # rateLimiterFailStrategy, direct/fallback/exception
+      rateLimiterFailStrategy: direct
+      # enableFusing
+      enableFusing: true
+      # fusingType: counter/percent
+      fusingType: counter
+      # totalFailure
+      totalFailure: 10
+      # fusingMilliSeconds
+      fusingMilliSeconds: 5000
+      # exceptionPostProcessorType
+      exceptionPostProcessorType: print

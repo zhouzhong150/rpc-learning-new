@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="io.zz.rpc.demo"/>
+
+    <context:property-placeholder location="classpath:rpc.properties"/>
+
+    <bean id="rpcClient" class="io.zz.rpc.consumer.common.RpcClient">
+        <constructor-arg name="registryAddress" value="${registry.address}"/>
+        <constructor-arg name="registryType" value="${registry.type}"/>
+        <constructor-arg name="registryLoadBalanceType" value="${registry.loadbalance.type}"/>
+        <constructor-arg name="proxy" value="${proxy.type}"/>
+        <constructor-arg name="serviceVersion" value="${service.version}"/>
+        <constructor-arg name="serviceGroup" value="${service.group}"/>
+        <constructor-arg name="serializationType" value="${serialization.type}"/>
+        <constructor-arg name="timeout" value="${timeout}"/>
+        <constructor-arg name="async" value="false"/>
+        <constructor-arg name="oneway" value="false"/>
+        <constructor-arg name="heartbeatInterval" value="${service.heartbeat.interval}"/>
+        <constructor-arg name="scanNotActiveChannelInterval" value="${service.scanNotActiveChannelInterval}"/>
+        <constructor-arg name="retryInterval" value="${consumer.retry.interval}"/>
+        <constructor-arg name="retryTimes" value="${consumer.retry.times}"/>
+        <constructor-arg name="enableResultCache" value="${consumer.enableResultCache}"/>
+        <constructor-arg name="resultCacheExpire" value="${consumer.resultCacheExpire}"/>
+        <constructor-arg name="enableDirectServer" value="${consumer.enableDirectServer}"/>
+        <constructor-arg name="directServerUrl" value="${consumer.directServerUrl}"/>
+        <constructor-arg name="enableDelayConnection" value="${consumer.enableDelayConnection}"/>
+        <constructor-arg name="corePoolSize" value="${consumer.corePoolSize}"/>
+        <constructor-arg name="maximumPoolSize" value="${consumer.maximumPoolSize}"/>
+        <constructor-arg name="flowType" value="${consumer.flowType}"/>
+        <constructor-arg name="enableBuffer" value="${consumer.enableBuffer}"/>
+        <constructor-arg name="bufferSize" value="${consumer.bufferSize}"/>
+        <constructor-arg name="reflectType" value="${consumer.reflectType}"/>
+        <constructor-arg name="fallbackClassName" value="${consumer.fallbackClassName}"/>
+        <constructor-arg name="enableRateLimiter" value="${consumer.enableRateLimiter}"/>
+        <constructor-arg name="rateLimiterType" value="${consumer.rateLimiterType}"/>
+        <constructor-arg name="permits" value="${consumer.permits}"/>
+        <constructor-arg name="milliSeconds" value="${consumer.milliSeconds}"/>
+        <constructor-arg name="rateLimiterFailStrategy" value="${consumer.rateLimiterFailStrategy}"/>
+        <constructor-arg name="enableFusing" value="${consumer.enableFusing}"/>
+        <constructor-arg name="fusingType" value="${consumer.fusingType}"/>
+        <constructor-arg name="totalFailure" value="${consumer.totalFailure}"/>
+        <constructor-arg name="fusingMilliSeconds" value="${consumer.fusingMilliSeconds}"/>
+        <constructor-arg name="exceptionPostProcessorType" value="${consumer.exceptionPostProcessorType}"/>
+    </bean>
+</beans>
