@@ -467,19 +467,6 @@ public class RpcProviderHandler extends SimpleChannelInboundHandler<RpcProtocol<
         Class<?>[] parameterTypes = request.getParameterTypes();
         Object[] parameters = request.getParameters();
 
-        logger.debug(serviceClass.getName());
-        logger.debug(methodName);
-        if (parameterTypes != null && parameterTypes.length > 0){
-            for (int i = 0; i < parameterTypes.length; ++i) {
-                logger.debug(parameterTypes[i].getName());
-            }
-        }
-
-        if (parameters != null && parameters.length > 0){
-            for (int i = 0; i < parameters.length; ++i) {
-                logger.debug(parameters[i].toString());
-            }
-        }
         return this.reflectInvoker.invokeMethod(serviceBean, serviceClass, methodName, parameterTypes, parameters);
     }
 

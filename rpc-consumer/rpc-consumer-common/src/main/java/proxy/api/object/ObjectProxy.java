@@ -164,7 +164,6 @@ public class ObjectProxy <T> implements InvocationHandler{
             this.cacheResultManager = CacheResultManager.getInstance(RpcConstants.RPC_SCAN_RESULT_CACHE_EXPIRE);
 
         }
-
         //默认值
         boolean enableResultCache = false;
         boolean oneway = false;

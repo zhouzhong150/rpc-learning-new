@@ -96,7 +96,6 @@ public class SpringBootConsumerAutoConfiguration {
         if (StringUtils.isEmpty(referenceBean.getDirectServerUrl())
                 || (RpcConstants.RPC_COMMON_DEFAULT_DIRECT_SERVER.equals(referenceBean.getDirectServerUrl()) && !StringUtils.isEmpty(consumerConfig.getDirectServerUrl()))){
             referenceBean.setDirectServerUrl(consumerConfig.getDirectServerUrl());
-
         }
 
         if (!referenceBean.isEnableDelayConnection()){

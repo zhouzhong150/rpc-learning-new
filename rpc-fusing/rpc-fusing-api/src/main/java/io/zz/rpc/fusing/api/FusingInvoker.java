@@ -30,6 +30,7 @@ public interface FusingInvoker {
      * 4.在半开启状态下，如果服务能力未能恢复，则断路器再次触发服务熔断，进入熔断时间。
      * @return 是否要触发熔断，true：触发熔断，false：不触发熔断
      */
+
     boolean invokeFusingStrategy();
 
     /**
