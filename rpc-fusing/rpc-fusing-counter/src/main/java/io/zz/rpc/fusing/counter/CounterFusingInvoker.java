@@ -32,26 +32,36 @@ public class CounterFusingInvoker extends AbstractFusingInvoker {
         switch (fusingStatus.get()){
             //关闭状态
             case RpcConstants.FUSING_STATUS_CLOSED:
-                result =  this.invokeClosedFusingStrategy();
                 break;
             //半开启状态
             case RpcConstants.FUSING_STATUS_HALF_OPEN:
-                result = this.invokeHalfOpenFusingStrategy();
+                result = true;
                 break;
             //开启状态
             case RpcConstants.FUSING_STATUS_OPEN:
-                result = this.invokeOpenFusingStrategy();
+                result =  this.invokeOpenFusingStrategy();
                 break;
             default:
-                result = this.invokeClosedFusingStrategy();
                 break;
         }
-        logger.info("execute counter fusing strategy, current fusing status is {}", fusingStatus.get());
+        logger.info("execute percent fusing strategy, current fusing status is {}", fusingStatus.get());
         return result;
     }
 
     @Override
     public double getFailureStrategyValue() {
-        return currentFailureCounter.doubleValue();
+        long now = System.currentTimeMillis();
+
+        synchronized (queue) {
+            if (queue.size() <= totalFailure) {
+                return queue.size();
+            }
+            // 将队列中所有早于窗口起始时间的请求移除
+            while (!queue.isEmpty() && now - queue.peek() >= milliSeconds) {
+                queue.poll();
+            }
+
+            return queue.size();
+        }
     }
 }

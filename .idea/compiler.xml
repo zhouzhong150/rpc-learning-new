@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rpc-demo-spring-xml-consumer" />
+        <module name="rpc-fusing-api" />
+        <module name="rpc-disuse-lru" />
+        <module name="rpc-reflect-cglib" />
+        <module name="rpc-demo-spring-xml-provider" />
+        <module name="rpc-registry-api" />
+        <module name="rpc-serialization-api" />
+        <module name="rpc-connection" />
+        <module name="rpc-ratelimiter-guava" />
+        <module name="rpc-loadbalancer-random" />
+        <module name="rpc-loadbalancer-random-weight" />
+        <module name="rpc-loadbalancer-least-connections" />
+        <module name="rpc-reflect-jdk" />
+        <module name="rpc-demo-api" />
+        <module name="rpc-disuse-lfu" />
+        <module name="rpc-demo-native-provider" />
+        <module name="rpc-demo-native-consumer" />
+        <module name="rpc-loadbalancer-sourceip-hash" />
+        <module name="rpc-fusing-counter" />
+        <module name="rpc-registry-zookeeper" />
+        <module name="rpc-consumer-spring" />
+        <module name="rpc-exception-api" />
+        <module name="rpc-flow-api" />
+        <module name="rpc-loadbalancer-random-weight-enhanced" />
+        <module name="rpc-serialization-json" />
+        <module name="rpc-loadbalancer-sourceip-hash-weight" />
+        <module name="rpc-protocol" />
+        <module name="rpc-common" />
+        <module name="rpc-buffer" />
+        <module name="rpc-spring-boot-starter-consumer" />
+        <module name="rpc-spring-boot-starter-provider" />
+        <module name="rpc-loadbalancer-round-robin-weight" />
+        <module name="rpc-provider-common" />
+        <module name="rpc-disuse-random" />
+        <module name="rpc-loadbalancer-consistenthash-zk-enhanced" />
+        <module name="rpc-loadbalancer-consistenthash-zk" />
+        <module name="rpc-ratelimiter-semaphore" />
+        <module name="rpc-exception-print" />
+        <module name="rpc-reflect-javassist" />
+        <module name="rpc-disuse-refuse" />
+        <module name="rpc-loadbalancer-hash" />
+        <module name="rpc-loadbalancer-sourceip-hash-weight-enhanced" />
+        <module name="rpc-reflect-bytebuddy" />
+        <module name="rpc-demo-docker-provider" />
+        <module name="rpc-loadbalancer-hash-weight" />
+        <module name="rpc-demo-docker-consumer" />
+        <module name="rpc-ratelimiter-counter" />
+        <module name="rpc-demo-spring-boot-provider" />
+        <module name="rpc-demo-spring-annotation-provider" />
+        <module name="rpc-flow-print" />
+        <module name="rpc-disuse-first" />
+        <module name="rpc-loadbalancer-round-robin-weight-enhanced" />
+        <module name="rpc-demo-spring-annotation-consumer" />
+        <module name="rpc-disuse-defult" />
+        <module name="rpc-serialization-fst" />
+        <module name="rpc-consumer-common" />
+        <module name="rpc-provider-spring" />
+        <module name="rpc-serialization-protostuff" />
+        <module name="rpc-disuse-fifo" />
+        <module name="rpc-reflect-api" />
+        <module name="rpc-constants" />
+        <module name="rpc-serialization-hessian2" />
+        <module name="rpc-codec" />
+        <module name="rpc-annotation" />
+        <module name="rpc-demo-spring-boot-consumer" />
+        <module name="rpc-loadbalancer-round-robin" />
+        <module name="rpc-threadpool" />
+        <module name="rpc-cache" />
+        <module name="rpc-spi" />
+        <module name="rpc-loadbalancer-api" />
+        <module name="rpc-disuse-api" />
+        <module name="rpc-fusing-percent" />
+        <module name="rpc-disuse-last" />
+        <module name="rpc-loadbalancer-hash-weight-enhanced" />
+        <module name="rpc-ratelimiter-api" />
+        <module name="rpc-serialization-kryo" />
+        <module name="rpc-provider-native" />
+        <module name="rpc-reflect-asm" />
+        <module name="rpc-serialization-jdk" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="rpc-demo-docker-consumer" options="-parameters" />
+      <module name="rpc-demo-docker-provider" options="-parameters" />
+      <module name="rpc-demo-spring-boot-consumer" options="-parameters" />
+      <module name="rpc-demo-spring-boot-provider" options="-parameters" />
+    </option>
+  </component>
+</project>

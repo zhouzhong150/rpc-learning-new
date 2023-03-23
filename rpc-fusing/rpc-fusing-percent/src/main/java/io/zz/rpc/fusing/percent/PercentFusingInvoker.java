@@ -31,18 +31,16 @@ public class PercentFusingInvoker extends AbstractFusingInvoker {
         switch (fusingStatus.get()){
             //关闭状态
             case RpcConstants.FUSING_STATUS_CLOSED:
-                result =  this.invokeClosedFusingStrategy();
                 break;
             //半开启状态
             case RpcConstants.FUSING_STATUS_HALF_OPEN:
-                result = this.invokeHalfOpenFusingStrategy();
+                result = true;
                 break;
             //开启状态
             case RpcConstants.FUSING_STATUS_OPEN:
                 result =  this.invokeOpenFusingStrategy();
                 break;
             default:
-                result = this.invokeClosedFusingStrategy();
                 break;
         }
         logger.info("execute percent fusing strategy, current fusing status is {}", fusingStatus.get());

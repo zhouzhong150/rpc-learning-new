@@ -15,6 +15,7 @@
  */
 package io.zz.rpc.annotation;
 
+import io.zz.rpc.config.ConsumerConfig;
 import io.zz.rpc.constants.RpcConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 

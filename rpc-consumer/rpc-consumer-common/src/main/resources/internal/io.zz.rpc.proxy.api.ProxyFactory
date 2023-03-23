@@ -1,0 +1,2 @@
+cglib=io.zz.rpc.proxy.api.CglibProxyFactory
+jdk=io.zz.rpc.proxy.api.JdkProxyFactory

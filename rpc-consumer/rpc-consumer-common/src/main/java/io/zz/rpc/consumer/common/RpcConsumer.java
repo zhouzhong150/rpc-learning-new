@@ -115,7 +115,6 @@ public class RpcConsumer {
         buildNettyGroup();
     }
 
-
     private void readResource(ConsumerConfig consumerConfig){
             this.heartbeatInterval = consumerConfig.getHeartbeatInterval();
             this.scanNotActiveChannelInterval = consumerConfig.getScanNotActiveChannelInterval();
